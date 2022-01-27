@@ -1,0 +1,36 @@
+POST https://blisshub.deta.dev/api/v1/user/create
+Content-Type: application/json
+
+{
+    "email":"fransbell@gmail.com",
+    "username":"franista",
+    "password":"66666666"
+}
+###
+
+POST https://blisshub.deta.dev/api/v1/user/login
+Content-Type: application/json
+
+{
+    "username":"franista",
+    "password":"66666666"
+}
+
+###
+POST https://blisshub.deta.dev/api/v1/user/verify
+Content-Type: application/json
+
+{
+    "tokenId":"ea079f61-8e69-40d1-a7f5-2a660b57b906"
+}
+
+###
+POST https://blisshub.deta.dev/api/v1/user/logout
+Content-Type: application/json
+
+{
+    "tokenId":"fa4b0340-9805-484d-8750-f266d3dec190"
+}
+
+###
+GET https://blisshub.deta.dev/
