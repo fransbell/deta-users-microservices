@@ -1,14 +1,14 @@
-POST https://blisshub.deta.dev/api/v1/user/create
+POST http://localhost:3000/auth/v1/user/create
 Content-Type: application/json
 
 {
     "email":"fransbell@gmail.com",
-    "username":"franista",
+    "username":"franistasia",
     "password":"66666666"
 }
 ###
 
-POST https://blisshub.deta.dev/api/v1/user/login
+POST http://localhost:3000/auth/v1/user/login
 Content-Type: application/json
 
 {
@@ -17,19 +17,19 @@ Content-Type: application/json
 }
 
 ###
-POST https://blisshub.deta.dev/api/v1/user/verify
+POST http://localhost:3000/auth/v1/user/verify
 Content-Type: application/json
 
 {
-    "tokenId":"ea079f61-8e69-40d1-a7f5-2a660b57b906"
+    "tokenId":"7ee98613-05b4-4834-84da-7d44adae8ea2"
 }
 
 ###
-POST https://blisshub.deta.dev/api/v1/user/logout
+POST http://localhost:3000/auth/v1/user/logout
 Content-Type: application/json
 
 {
-    "tokenId":"fa4b0340-9805-484d-8750-f266d3dec190"
+    "tokenId":"7ee98613-05b4-4834-84da-7d44adae8ea2"
 }
 
 ###

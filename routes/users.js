@@ -1,6 +1,6 @@
 const express = require("express")
 const bcrypt = require("bcrypt")
-const setSession = require("../utils/setSession")
+const { setSession, generateUniqueUUID } = require("../utils/setSession")
 const crypto = require("crypto")
 
 const route = (deta) => {
@@ -14,16 +14,8 @@ const route = (deta) => {
     if (!exist.count) {
       // save new user
       const hashed = bcrypt.hashSync(password, 8)
-      const generateUniqueUUID = async (db) => {
-        const uuid = crypto.randomUUID()
-        const exist = await db.get(uuid)
-        if (exist) {
-          return generateUniqueUUID(db)
-        } else {
-          return uuid
-        }
-      }
       const key = await generateUniqueUUID(users)
+
       await users.put({ key, email, username, password: hashed })
 
       res.json({ key, email, username })

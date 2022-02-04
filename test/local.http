@@ -1,0 +1,25 @@
+POST http://localhost:3000/auth/local/login/
+Content-Type: application/json
+
+{
+    "username":"franist",
+    "password":"6666666"
+}
+
+###
+POST http://localhost:3000/auth/verify
+Content-Type: application/json
+
+{
+    "tokenId":"4c5daeb9-fbfc-4a0d-b95b-672aa7931936"
+}
+
+###
+POST http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "tokenId":"4c5daeb9-fbfc-4a0d-b95b-672aa7931936"
+}
+
+###

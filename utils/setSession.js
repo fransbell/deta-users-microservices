@@ -20,4 +20,4 @@ const setSession = async (db, userId) => {
   }
 }
 
-module.exports = setSession
+module.exports = { setSession, generateUniqueUUID }
